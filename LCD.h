@@ -9,9 +9,9 @@
 #ifndef LCD_H_
 #define LCD_H_
 
-#include "../Utils.h"
+#include "Utils.h"
 
-#include "../std_types.h"
+#include "std_types.h"
 
 
 /************************************************************************/
