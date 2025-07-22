@@ -15,7 +15,7 @@
 
 #include <util/delay.h>
 
-#include "../DIO/DIO.h"
+#include "DIO.h"
 
 
 #include "LCD.h"
@@ -413,4 +413,27 @@ void LCD_vPrintCentered(u8 row, Pu8 str)
      * Print the string starting from that position
      */
     LCD_vSendString(str);
+}
+
+
+
+void LCD_vBlinkCenteredStrings(Pu8 str1, Pu8 str2, u8 blinks, u16 delay_ms)
+{
+	for (u8 i = 0; i < blinks; i++)
+	{
+		/* Display both strings centered	*/
+		LCD_vPrintCentered(0, str1);
+		LCD_vPrintCentered(1, str2);
+
+		_delay_ms(delay_ms);
+
+		/* Clear display to blink	*/
+		LCD_vClear_Display();
+
+		_delay_ms(delay_ms);
+	}
+
+	/* Optionally: Show the strings at the end of blinking	*/
+	LCD_vPrintCentered(0, str1);
+	LCD_vPrintCentered(1, str2);
 }
