@@ -141,6 +141,18 @@ void LCD_vPrintCentered(u8 row, Pu8 str);
 
 
 
+/*
+ * brief: Blinks two centered strings on the LCD for a specified number of times
+ *
+ * param: str1      - String to display on row 0
+ * param: str2      - String to display on row 1
+ * param: blinks    - Number of times to blink the strings
+ * param: delay_ms  - Delay in milliseconds between blink on and off
+ */
+
+void LCD_vBlinkCenteredStrings(Pu8 str1, Pu8 str2, u8 blinks, u16 delay_ms)
+
+
 
 
 /************************************************************************/
