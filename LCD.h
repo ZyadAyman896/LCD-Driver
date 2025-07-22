@@ -150,7 +150,7 @@ void LCD_vPrintCentered(u8 row, Pu8 str);
  * param: delay_ms  - Delay in milliseconds between blink on and off
  */
 
-void LCD_vBlinkCenteredStrings(Pu8 str1, Pu8 str2, u8 blinks, u16 delay_ms)
+void LCD_vBlinkCenteredStrings(Pu8 str1, Pu8 str2, u8 blinks, u16 delay_ms);
 
 
 
